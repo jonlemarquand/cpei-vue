@@ -1,14 +1,17 @@
 <template>
     <Hero />
+    <Results />
 </template>
 
 <script>
 
 import Hero from './components/Hero/Hero';
+import Results from './components/Results/Results';
 
 export default {
     components: {
-      Hero
+      Hero,
+      Results
     }
 }
 </script>
@@ -46,7 +49,7 @@ p, ul {
   line-height: 20px;
 }
 
-#App {
+#app {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
