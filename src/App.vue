@@ -1,17 +1,30 @@
 <template>
     <Hero />
     <Results />
+    <BestPractice />
+    <TestYourself />
+    <Faqs />
+    <Resources />
 </template>
 
 <script>
 
+import BestPractice from './components/BestPractice/BestPractice';
+import Faqs from './components/Faqs/Faqs';
 import Hero from './components/Hero/Hero';
+import Resources from './components/Resources/Resources';
 import Results from './components/Results/Results';
+import TestYourself from './components/TestYourself/TestYourself';
+
 
 export default {
     components: {
       Hero,
-      Results
+      Results,
+      BestPractice,
+      TestYourself,
+      Faqs,
+      Resources
     }
 }
 </script>
