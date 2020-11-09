@@ -1,16 +1,18 @@
 <template>
     <div className="infobox">
-        <div onClick={ IsOpenHandler } class="infobox-header">
-            <h3>{ headerText }</h3>
+        <div class="infobox-header">
+            <h3>{{ headerText }}</h3>
             <div class="crossOpen">&#43;</div>
         </div>
-        { ActiveContent }
+        <slots></slots>
     </div>
 </template>
 
 <script>
 export default {
-    
+    props: {
+        headerText: String,
+    }
 }
 </script>
 
@@ -30,7 +32,8 @@ export default {
     h3 {
         color: $tiWhite;
         margin: 0;
-        text-transform: none;
+        text-transform: uppercase;
+        font-size: 18px;
     }
 
     .crossOpen {
