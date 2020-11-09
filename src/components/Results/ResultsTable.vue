@@ -90,7 +90,7 @@
 <script>
 export default {
     props: {
-        results: Array,
+        results: Object,
     }
 }
 </script>

@@ -1,10 +1,14 @@
 <template>
     <div className="infobox">
-        <div class="infobox-header">
+        <div 
+            class="infobox-header" 
+            @click="setOpen()"
+            :class="setActive"
+        >
             <h3>{{ headerText }}</h3>
-            <div class="crossOpen">&#43;</div>
+            <div class="crossOpen" :class="setActive">&#43;</div>
         </div>
-        <slots></slots>
+        <slot v-if="shouldOpen"></slot>
     </div>
 </template>
 
@@ -12,6 +16,25 @@
 export default {
     props: {
         headerText: String,
+    },
+    data() {
+        return {
+            shouldOpen: false
+        }
+    },
+    computed: {
+        setActive() {
+            if (this.shouldOpen) {
+                return "active"
+            } else {
+                return null;
+            }
+        }
+    },
+    methods: {
+        setOpen() {
+            this.shouldOpen = !this.shouldOpen
+        }
     }
 }
 </script>
