@@ -1,39 +1,87 @@
 <template>
-    <div className="results-table">
-        <div className="results-A">
-            <div className="results-letter">A</div>
-            <div className="results-container">
-                <div className="results-list">{ AScores }</div>
+    <div class="results-table">
+        <div class="results-A">
+            <div class="results-letter">A</div>
+            <div class="results-container">
+                <div class="results-list">
+                    <div 
+                        class="company"
+                        v-for="result in results.AResults"
+                        :key="result.display"
+                    >
+                    {{ result.display }}
+                    </div>
+                </div>
             </div>
         </div>
-        <div className="results-B">
-            <div className="results-letter">B</div>
-            <div className="results-container">
-                <div className="results-list">{ BScores }</div>
+        <div class="results-B">
+            <div class="results-letter">B</div>
+            <div class="results-container">
+                <div class="results-list">
+                    <div 
+                        class="company"
+                        v-for="result in results.BResults"
+                        :key="result.display"
+                    >
+                    {{ result.display }}
+                    </div>
+                </div>
             </div>
         </div>
-        <div className="results-C">
-            <div className="results-letter">C</div>
-            <div className="results-container">
-                <div className="results-list">{ CScores }</div>
+        <div class="results-C">
+            <div class="results-letter">C</div>
+            <div class="results-container">
+                <div class="results-list">
+                    <div 
+                        class="company"
+                        v-for="result in results.CResults"
+                        :key="result.display"
+                    >
+                    {{ result.display }}
+                    </div>
+                </div>
             </div>
         </div>
-        <div className="results-D">
-            <div className="results-letter">D</div>
-            <div className="results-container">
-                <div className="results-list">{ DScores }</div>
+        <div class="results-D">
+            <div class="results-letter">D</div>
+            <div class="results-container">
+                <div class="results-list">
+                    <div 
+                        class="company"
+                        v-for="result in results.DResults"
+                        :key="result.display"
+                    >
+                    {{ result.display }}
+                    </div>
+                </div>
             </div>
         </div>
-        <div className="results-E">
-            <div className="results-letter">E</div>
-            <div className="results-container">
-                <div className="results-list">{ EScores }</div>
+        <div class="results-E">
+            <div class="results-letter">E</div>
+            <div class="results-container">
+                <div class="results-list">
+                    <div 
+                        class="company"
+                        v-for="result in results.EResults"
+                        :key="result.display"
+                    >
+                    {{ result.display }}
+                    </div>
+                </div>
             </div>
         </div>
-        <div className="results-F">
-            <div className="results-letter">F</div>
-            <div className="results-container">
-                <div className="results-list">{ FScores }</div>
+        <div class="results-F">
+            <div class="results-letter">F</div>
+            <div class="results-container">
+                <div class="results-list">
+                    <div 
+                        class="company"
+                        v-for="result in results.FResults"
+                        :key="result.display"
+                    >
+                    {{ result.display }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -41,7 +89,9 @@
 
 <script>
 export default {
-    
+    props: {
+        results: Array,
+    }
 }
 </script>
 

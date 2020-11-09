@@ -5,6 +5,7 @@
             <div class="theme-options" 
                 v-for="theme in themesList" 
                 :key="theme.value"
+                @click="setNewTheme(theme.value)"
             >            
                 <input type="radio" name="themes" :value="theme.value" :id="theme.value" v-model="activeTheme" />
                 <label  :for="theme.value">{{ theme.name }}</label>
@@ -15,6 +16,7 @@
             <div class="industry-options" 
                 v-for="industry in industriesList" 
                 :key="industry.value"
+                @click="setNewIndustry(industry.value)"
             >            
                 <input type="radio" name="industries" :value="industry.value" :id="industry.value" v-model="activeIndustry" />
                 <label  :for="industry.value">{{ industry.name }}</label>
@@ -52,6 +54,17 @@ export default {
                 {name:"Telecommunication and Media", value: "telecomms"}
             ]
         }
+    },
+    emits: ['set-theme', 'set-industry'],
+    methods: {
+        setNewTheme(Theme) {
+            const newTheme = Theme;
+            this.$emit('set-theme', newTheme)
+        },
+        setNewIndustry(Industry) {
+            const newIndustry = Industry;
+            this.$emit('set-industry', newIndustry)
+        }
     }
 }
 </script>
@@ -64,6 +77,7 @@ export default {
             font-family: $primaryFont;
             text-transform: uppercase;
             font-weight: 700;
+            font-size: 14px;
             //padding: 4px 5px 5px 5px;
             display: flex;
             flex-direction: column;
@@ -73,23 +87,22 @@ export default {
                 outline: 3px $tiGreen solid;
             }
         
-        input, label {
-            padding: 5px;
-        }
-        
+            label {
+                padding: 10px;
+            }
+
         input:checked + label {
             background: $tiPink;
         }
-    
+
+   
         &:hover, label:hover {
             background: $tiGreen;
             cursor: pointer;
         }
 
         input {
-            opacity: 0;
-            width: 0;
-            height: 0;
+            display: none;
         }
         }
     }
