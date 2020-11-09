@@ -1,26 +1,55 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Hero />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Hero from './components/Hero/Hero';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    components: {
+      Hero
+    }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald:wght@400;500;700&display=swap');
+
+html { 
+  scroll-behavior: smooth
+}
+
+h1 {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: $primaryFont;
+  font-size: 38px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: $primaryFont;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: Oswald, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+p, ul {
+  font-family: $secondaryFont;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#App {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 </style>
