@@ -19,7 +19,7 @@
         <div className="resource-column">
             <h3>Other</h3>
             <a className="pub-btn" href="https://openaccess.transparency.org.uk">Open Access</a>
-            <a className="pub-btn" href="https://openaccess.transparency.org.uk">Press Release</a>
+            <a className="pub-btn" href="https://www.transparency.org.uk/press-releases/public-in-the-dark-over-the-political-activities-of-big-business/">Press Release</a>
         </div>
         <div className="resource-column">
             <h3>Contact</h3>

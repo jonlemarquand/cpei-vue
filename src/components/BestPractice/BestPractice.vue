@@ -8,7 +8,8 @@
                     @set-Slug="setNewSlug"
                 />
             </div>
-                <BestPracticeContent v-if="bestPracticeActive === 'control'" title="Control Environment" imgLink="controlenvironmentnew-p-500.png">
+                <BestPracticeContent v-if="bestPracticeActive === 'control'" title="Control Environment" imgLink="controlenvironmentnew-p-500.png"
+                pdfURL="CE">
                     <p>The control environment concerns the corporate culture, values, operational style and organisational structures that underpin a company’s approach to political engagement. Having the right structures in place enables companies to spot - and stop – political corruption.</p>
                     <p><strong>Best Practice:</strong></p>
                     <ul>
@@ -18,7 +19,7 @@
                         <li>Be consistent – implement group-wide, global approaches to political engagement</li>
                     </ul>
                 </BestPracticeContent>
-                <BestPracticeContent v-if="bestPracticeActive === 'political'" title="Political Contributions" imgLink="politicalcontributions.png">
+                <BestPracticeContent v-if="bestPracticeActive === 'political'" title="Political Contributions" imgLink="politicalcontributions.png" pdfURL="PC">
                      <p>Political contributions can range from money and gifts in-kind for a political party or politician, to loans, free or discounted services, property, sponsorship of events and the use of facilities at less than market value. Making political contributions, particularly in secret, is often associated with improper behaviour.</p>
                      <p><strong>Best Practice:</strong></p>
                      <ul>
@@ -29,7 +30,7 @@
                         <li>Payments are made public, whether or not it is a legal requirement</li>
                     </ul>
                 </BestPracticeContent>
-                <BestPracticeContent v-if="bestPracticeActive === 'responsible'" title="Responsible Lobbying" imgLink="lobbying2-p-500.png" >
+                <BestPracticeContent v-if="bestPracticeActive === 'responsible'" title="Responsible Lobbying" imgLink="lobbying2-p-500.png" pdfURL="RL" >
                     <p>Lobbying is any direct or indirect communication with political decision-makers for the purpose of influencing laws, regulations and government plans. It can also include attempts to influence public opinion, outside of normal advertising and marketing activity, with a view to impacting the views if politicians and government officials.</p>
                     <p>When carried out responsibly, lobbying is a legitimate and beneficial activity, although it should never undermine people's trust in democracy, the economy, institutions and leaders.</p>
                     <p><strong>Best Practice:</strong></p>
@@ -39,7 +40,7 @@
                         <li>Demonstrate transparency – reveal when a serving politician is hired and how much is spent on lobbying activities</li>
                     </ul>
                 </BestPracticeContent>
-                <BestPracticeContent v-if="bestPracticeActive === 'revolving'" title="Revolving Door" imgLink="revolving-door.png" >
+                <BestPracticeContent v-if="bestPracticeActive === 'revolving'" title="Revolving Door" imgLink="revolving-door.png" pdfURL="RD" >
                     <p>The revolving door involves the movement of individuals between positions of public office and jobs in the private sector, in either direction. This includes hiring public officials, seconding staff to the public sector, receiving secondees from the public sector and contact with former staff now in public office.</p>
                     <p>The revolving door poses risks of conflicts of interest, trading in influence, bribery, reputational damage and public mistrust.</p>
                     <p><strong>Best Practice:</strong></p>
@@ -49,7 +50,7 @@
                         <li>Publish details of secondments to and from the public sector – revealing the number, location and purpose of secondments</li>
                     </ul>
                 </BestPracticeContent>
-                <BestPracticeContent v-if="bestPracticeActive === 'transparency'" title="Transparency" imgLink="transparency.png">
+                <BestPracticeContent v-if="bestPracticeActive === 'transparency'" title="Transparency" imgLink="transparency.png" pdfURL="TR">
                     <p>Public reporting is one of the most important ways in which companies demonstrate their commitment to responsible political engagement.</p>
                     <p>Information about corporate political activities is often difficult to find, making it hard for stakeholders - investors, customers and employees -  to understand a company’s public policy position, how much they invests in lobbying and if the company is working ethnically.</p>
                     <p><strong>Best Practice:</strong></p>

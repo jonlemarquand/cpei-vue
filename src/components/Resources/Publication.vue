@@ -1,7 +1,7 @@
 <template>
     <div class="publication">
         <img :src="require(`../../assets/publications/${imageSrc}`)" alt="publication" class="pub-img" />
-        <a class="pub-btn" :href="urlLink">Download PDF</a>
+        <a class="pub-btn" :href="`${publicPath}${urlLink}`">Download PDF</a>
     </div>
 </template>
 
@@ -10,6 +10,11 @@ export default {
     props: {
         imageSrc: String,
         urlLink: String,
+    },
+    data() {
+        return {
+            publicPath: process.env.BASE_URL
+        }
     }
 }
 </script>

@@ -5,7 +5,7 @@
             <div class="bp-text">
             <slot></slot>
             </div>
-            <a href="http://test.com" class="bp-read-more">Read More</a>
+            <a :href="`${publicPath}CPEI_QuickGuides_${pdfURL}.pdf`" class="bp-read-more">Read More</a>
             </div>
             <div class="bp-column-img">
                 <img :src="require(`../../assets/${imgLink}`)" class="bp-image" alt="40 percent of businesses ranked a to c"/>
@@ -18,6 +18,12 @@ export default {
     props: {
         title: String,
         imgLink: String,
+        pdfURL: String,
+    },
+    data() {
+        return {
+            publicPath: process.env.BASE_URL
+        }
     }
 }
 </script>
